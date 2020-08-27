@@ -1,4 +1,0 @@
-- Tela de login
-- Voltado para o adm
-- Agendamento de partidas para amadores
-- Tela principal com calendário e fluxo de partidas
