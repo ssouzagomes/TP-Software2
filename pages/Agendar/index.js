@@ -2,6 +2,9 @@ var pessoa = {
     nome: [''],
     sobrenome: [''],
     cpf: ['']
+    nome: " ",
+    sobrenome: " ",
+    cpf: " "
 }
 
 function agendamento(){
