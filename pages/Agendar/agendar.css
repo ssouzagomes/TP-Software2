@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  height: 100%;
+
+  background: #F0F0F7;
+}
+
+header {
+  background-color: #8257E5;
+  
+  width: 100%;
+  height: 260px;
+}
+
+#header-container {
+  font-family: Poppins;
+}
+
+#header-container img {
+  width: 100px;
+  height: 35px;
+}
+
+#header-container #logo {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header-container #logo h2 {
+  color: #F0F0F7;
+  font-size: 40px;
+}
+
+#header-container #texto {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+#header-container #texto h1 {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+#header-container #texto h2 {
+  color: #F0F0F7;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 64px;
+}
+
+.card {
+  width: 500px;
+  height: 500px;
+  background: #FFFFFF;
+  font-family: Archivo;
+  font-size: 20px;
+  line-height: 32px;
+
+  border-radius: 16px;
+  margin-bottom: 64px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.campos-form {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 24px;
+}
+
+.campos-form label {
+  color: #9C98A6;
+  font-size: 16px;
+}
+
+.campos-form input {
+  border: 1px solid #9C98A6;
+  background: #F8F8FC;
+
+  width: 350px;
+  height: 30px;
+
+  border-radius: 8px;
+}
+
+#data-horario {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#data-horario input {
+  width: 160px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  margin-left: 80px;
+
+  width: 180px;
+  height: 40px;
+
+  background: #04D361;
+  border: none;
+  border-radius: 8px;
+
+  font-weight: bold;
+  font-size: 18px;
+  color: #FFFFFF;
+
+  transition: color 0.15ms;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #04bf58;
+}
