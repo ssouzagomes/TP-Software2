@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="pages/Login/login.css" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="pages/Login/login.js"></script>
+
   <title>Login</title>
 </head>
 <body>
@@ -15,11 +17,11 @@
       <div class="img">
         <img src="assets/img/ball.jpg" alt="bola de tênis">
       </div>
-      <form class="form" action="" method="post">
-        <input type="email" name="email" maxlength="45" placeholder="E-mail" required autofocus><br>
-        <input type="password" name="senha" maxlength="45" placeholder="Senha" required autofocus><br>
+      <form action="" id="form" class="form" method="post">
+        <input type="text" id="usuario" maxlength="45" placeholder="Usuário" required autofocus><br>
+        <input type="password" id="senha" maxlength="45" placeholder="Senha" required autofocus><br>
 
-        <button type="submit" name="login" id="login">Entrar</button>
+        <button onclick="entrar()" type="submit" name="login" id="login">Entrar</button>
       </form>
     </div>
   </div>
