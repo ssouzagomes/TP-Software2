@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt_br" class="login">
 <head>
+  <script type="text/javascript">
+    var db= openDatabase("Meu banco", "2.0", "Mybase", 4048);
+    db.transaction(function(criar){
+        criar.executeSql("CREATE TABLE users (ID PRIMARY KEY, usuario TEXT, senha TEXT)");
+    });      
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
