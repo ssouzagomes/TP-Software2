@@ -91,3 +91,21 @@ main {
 .card #data-horario #horario {
   padding-right: 62px;
 }
+
+main #buttonDelete {
+  position: relative;
+  top: 16px;
+  right: 40px;
+}
+
+button#delete {
+  border: none;
+  cursor: pointer;
+}
+
+button#delete img{
+  width: 25px;
+  height: 25px;
+
+  background-color: #FFFFFF
+}
