@@ -6,7 +6,7 @@ function entrar() {
     inserir.executeSql("INSERT INTO users (usuario, senha) VALUES (?,?)", [usuario, senha])
 });
 
-  if(usuario == 'Suricato' && senha == 1234) {
+  if(usuario == 'tnis' && senha == 1234) {
     document.getElementById('form').action = 'pages/Principal/principal.html'
   } else {
     alert('Dados incorretos!')
