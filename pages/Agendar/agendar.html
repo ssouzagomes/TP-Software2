@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="../../assets/icon/ball.svg" />
-
+  
   <link href="agendar.css" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="agendar.js"></script>
+  
   <title>Agendar Horário</title>
 </head>
 <body>
@@ -32,35 +34,35 @@
 
     <main>
       <div class="card">
-        <form action="">
+        <form action="#" onsubmit="agendar();return false">
           <div class="campos-form">
             <label for="nome">Nome</label>
-            <input type="text" id="nome">
+            <input type="text" id="nome" required>
           </div>
           
           <div class="campos-form">
             <label for="sobrenome">Sobrenome</label>
-            <input type="text" id="sobrenome">
+            <input type="text" id="sobrenome" >
           </div>
 
           <div class="campos-form">
             <label for="cpf">CPF</label>
-            <input type="text" id="cpf">
+            <input type="text" id="cpf" >
           </div>
 
           <div id="data-horario">
             <div class="campos-form">
               <label for="data">Data</label>
-              <input type="date" id="data">
+              <input type="date" id="data" >
             </div>
 
             <div class="campos-form">
               <label for="hora">Horário</label>
-              <input type="time" id="hora">
+              <input type="time" id="hora" >
             </div>
           </div>
 
-          <button type="submit">Agendar</button>
+          <button type="submit" name="agenda" id="agenda">Agendar</button>
         </form>
       </div>
     </main>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -11,6 +11,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <title>Horários marcados</title>
+
+  <script src="../Agendar/agendar.js"></script>
 </head>
 
 <body>
@@ -31,27 +33,58 @@
       </div>
     </header>
 
+    <script>
+      let tamanho = localStorage.length
+      console.log(tamanho)
+      // for (let index = 0; index < tamanho; index++) {
+    </script>
+
     <main>
       <div class="card">
         <div id="dados-pessoais">
           <div id="nome">
             <strong>Nome:</strong><br>
-            <span>Samuel de Souza Gomes</span>
+            <span>
+              <script>
+                var nome = localStorage.getItem('0').slice(0, 8) + ' ' + localStorage.getItem('1').slice(0, 7)
+                console.log(nome)
+                var nomeNovo = nome.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+                document.write(nomeNovo)
+              </script>
+            </span>
           </div>
           <div id="cpf">
             <strong>CPF:</strong><br>
-            <span>999.999.999-99</span>
+            <span>
+              <script>
+                var cpf = localStorage.getItem('2').slice(0, 13)
+                var cpfNovo = cpf.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+                document.write(cpfNovo)
+              </script>
+            </span>
           </div>
         </div>
   
         <div id="data-horario">
           <div id="data">
             <strong>Data:</strong><br>
-            <span>30/08/2020</span>
+            <span>
+              <script>
+                var data = localStorage.getItem('3').slice(0, 13)
+                var dataNovo = data.replace(/[`~!@#$%^&*()_|+\=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+                document.write(dataNovo)
+              </script>
+            </span>
           </div>
           <div id="horario">
             <strong>Horário:</strong><br>
-            <span>8:00</span>
+            <span>
+              <script>
+                var hora = localStorage.getItem('4').slice(0, 7)
+                var horaNovo = hora.replace(/[`~!@#$%^&*()_|+\-=?;'",.<>\{\}\[\]\\\/]/gi, '');
+                document.write(horaNovo)
+              </script>
+            </span>
           </div>
         </div>
       </div>
@@ -60,6 +93,10 @@
         <button id="delete"><img src="../../assets/icon/delete.svg" alt="Deletar"></button>
       </div>
     </main>
+
+    <!-- <script>
+    }
+    </script> -->
 
   </div>
 </body>
