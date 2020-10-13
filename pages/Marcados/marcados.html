@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="../../assets/icon/ball.svg" />
-
   <link href="marcados.css" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
   <title>Horários marcados</title>
 
   <script src="../Agendar/agendar.js"></script>
@@ -32,73 +33,26 @@
         </div>
       </div>
     </header>
-
-    <script>
-      let tamanho = localStorage.length
-      console.log(tamanho)
-      // for (let index = 0; index < tamanho; index++) {
-    </script>
-
-    <main>
-      <div class="card">
-        <div id="dados-pessoais">
-          <div id="nome">
-            <strong>Nome:</strong><br>
-            <span>
-              <script>
-                var nome = localStorage.getItem('0').slice(0, 8) + ' ' + localStorage.getItem('1').slice(0, 7)
-                console.log(nome)
-                var nomeNovo = nome.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
-                document.write(nomeNovo)
-              </script>
-            </span>
-          </div>
-          <div id="cpf">
-            <strong>CPF:</strong><br>
-            <span>
-              <script>
-                var cpf = localStorage.getItem('2').slice(0, 13)
-                var cpfNovo = cpf.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
-                document.write(cpfNovo)
-              </script>
-            </span>
-          </div>
-        </div>
-  
-        <div id="data-horario">
-          <div id="data">
-            <strong>Data:</strong><br>
-            <span>
-              <script>
-                var data = localStorage.getItem('3').slice(0, 13)
-                var dataNovo = data.replace(/[`~!@#$%^&*()_|+\=?;:'",.<>\{\}\[\]\\\/]/gi, '');
-                document.write(dataNovo)
-              </script>
-            </span>
-          </div>
-          <div id="horario">
-            <strong>Horário:</strong><br>
-            <span>
-              <script>
-                var hora = localStorage.getItem('4').slice(0, 7)
-                var horaNovo = hora.replace(/[`~!@#$%^&*()_|+\-=?;'",.<>\{\}\[\]\\\/]/gi, '');
-                document.write(horaNovo)
-              </script>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div id="buttonDelete">
-        <button id="delete"><img src="../../assets/icon/delete.svg" alt="Deletar"></button>
-      </div>
+    
+    <main class="mainDados">
+      
     </main>
 
-    <!-- <script>
-    }
-    </script> -->
-
   </div>
+
+  <script>
+    var dados = JSON.parse(localStorage.getItem('0'))
+    var main = $('main.mainDados');
+
+    for (let index = 0; index < dados.nome.length; index++) {
+      // document.getElementById("spanNome").innerHTML = dados.nome[index] + ' ' + dados.sobrenome[index]
+      // document.getElementById("spanCpf").innerHTML = dados.cpf[index]
+      // document.getElementById("spanData").innerHTML = dados.data[index]
+      // document.getElementById("spanHora").innerHTML = dados.hora[index]
+    
+      main.append('<div class="contentDados"> <div class="card"> <div id="dados-pessoais"> <div id="nome"> <strong>Nome:</strong><br> <span id="spanNome">' + dados.nome[index] + ' ' + dados.sobrenome[index] + '</span></div> <div id="cpf"> <strong>CPF:</strong><br> <span id="spanCpf">' + dados.cpf[index] + '</span> </div> </div> <div id="data-horario"> <div id="data"> <strong>Data:</strong><br> <span id="spanData">' + dados.data[index] + '</span> </div> <div id="horario"> <strong>Horário:</strong><br> <span id="spanHora">' + dados.hora[index] + '</span> </div> </div> <div id="buttonDelete"> <button onclick="deletar()" id="delete"><img src="../../assets/icon/delete.svg" alt="Deletar"></button> </div> </div> </div>');
+    }
+  </script>
 </body>
 
 </html>

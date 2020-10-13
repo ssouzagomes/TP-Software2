@@ -5,7 +5,7 @@
 }
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 
   background: #F0F0F7;
 }
@@ -54,9 +54,17 @@ header {
 main {
   display: flex;
   justify-content: center;
-
+  flex-direction: column;
+  
   width: 100%;
   margin-top: 64px;
+}
+
+.contentDados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card {
@@ -68,6 +76,8 @@ main {
   line-height: 32px;
 
   border-radius: 8px;
+
+  margin-bottom: 64px;
 
   display: flex;
   flex-direction: column;
@@ -89,13 +99,13 @@ main {
 }
 
 .card #data-horario #horario {
-  padding-right: 25px;
+  padding-right: 64px;
 }
 
 main #buttonDelete {
   position: relative;
-  top: 16px;
-  right: 48px;
+  bottom: 195px;
+  left: 240px;
 }
 
 button#delete {
