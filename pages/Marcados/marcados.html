@@ -41,11 +41,11 @@
   </div>
 
   <script>
-    var dados = JSON.parse(localStorage.getItem('0'))
-    var main = $('main.mainDados');
+    var dados = JSON.parse(localStorage.getItem('0')) //converte a string para json
+    var main = $('main.mainDados'); //chama uma tag html
 
     for (let index = 0; index < dados.nome.length; index++) {
-         
+      //adiciona como array   
       main.append('<div class="contentDados"> <div class="card"> <div id="dados-pessoais"> <div id="nome"> <strong>Nome:</strong><br> <span id="spanNome">' + dados.nome[index] + ' ' + dados.sobrenome[index] + '</span></div> <div id="cpf"> <strong>CPF:</strong><br> <span id="spanCpf">' + dados.cpf[index] + '</span> </div> </div> <div id="data-horario"> <div id="data"> <strong>Data:</strong><br> <span id="spanData">' + dados.data[index] + '</span> </div> <div id="horario"> <strong>Horário:</strong><br> <span id="spanHora">' + dados.hora[index] + '</span> </div> </div> <div id="buttonDelete"> <button onclick="deletar()" id="delete"><img src="../../assets/icon/delete.svg" alt="Deletar"></button> </div> </div> </div>');
     }
   </script>
